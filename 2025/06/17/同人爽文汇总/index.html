@@ -518,25 +518,11 @@
   
     <article id="comments" lazyload>
       
-  <div id="twikoo"></div>
+  <div id="SOHUCS" sid='http://example.com/2025/06/17/%E5%90%8C%E4%BA%BA%E7%88%BD%E6%96%87%E6%B1%87%E6%80%BB/'></div>
   <script type="text/javascript">
-    Fluid.utils.loadComments('#comments', function() {
-      Fluid.utils.createScript('https://lib.baomitu.com/twikoo/1.6.8/twikoo.all.min.js', function() {
-        var options = Object.assign(
-          {"envId":"cluster0.i6gdcai.mongodb.net/","region":"ap-shanghai","path":"window.location.pathname"},
-          {
-            el: '#twikoo',
-            path: 'window.location.pathname',
-            onCommentLoaded: function() {
-              Fluid.utils.listenDOMLoaded(function() {
-                var imgSelector = '#twikoo .tk-content img:not(.tk-owo-emotion)';
-                Fluid.plugins.imageCaption(imgSelector);
-                Fluid.plugins.fancyBox(imgSelector);
-              });
-            }
-          }
-        )
-        twikoo.init(options)
+    Fluid.utils.loadComments('#SOHUCS', function() {
+      Fluid.utils.createScript("https://changyan.sohu.com/upload/changyan.js", function() {
+        window.changyan.api.config({"appid":"cyxXogMSF","appkey":"prod_f8a589ab3b3e32150e892023e7a50eae"})
       });
     });
   </script>
