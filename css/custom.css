@@ -1,0 +1,150 @@
+/* ============================================================
+   金沐站 · 深色品牌主题
+   深灰蓝暗色底 + 灵岳红黄品牌色（红 #E2231A / 黄 #FFC300）
+   加载位置：body 末尾（晚于主题 style.css 与配置内联样式）
+   ============================================================ */
+
+/* ---------- 全局文字色 ---------- */
+html, body { color: #d8dde4; }
+h1, h2, h3, h4, h5, h6 { color: #eef1f5; }
+#post .pjax article h2 { border-bottom: 1px solid #343b46; }
+
+/* ---------- 左侧深色栏（品牌化） ---------- */
+.nav { background-color: #1a1d24; }
+.nav-left {
+  background: #16181f;
+  box-shadow: inset -15px 0 15px -15px #000;
+}
+.nav-left .avatar {
+  box-shadow: 0 0 0 4px #FFC300, 0 0 12px 4px rgba(255, 195, 0, .28);
+}
+.nav-left .author { color: #eef1f5; }
+.nav-left .icon a { color: rgba(255, 255, 255, .85); }
+.nav-left .icon a:hover { color: #FFC300; }
+.nav-left ul { border-top: 1px solid rgba(255, 255, 255, .08); }
+.nav-left ul li { border-bottom: 1px solid rgba(255, 255, 255, .08); }
+.nav-left ul li > div { color: rgba(255, 255, 255, .72); }
+.nav-left ul li > div:hover { color: #fff; }
+.nav-left ul li > div:hover::after { background: #E2231A; width: 5px; }
+.nav-left ul li > div.active { color: #111; }
+.nav-left ul li > div.active::after { background: #FFC300; }
+.nav-left ul.sub { border-left: 2px solid #E2231A; }
+
+/* ---------- 右侧文章列表栏 ---------- */
+.nav-right { background: #1a1e25; border-right: 1px solid #262c36; }
+.nav-right .title-list .right-top {
+  background-image: radial-gradient(transparent 1px, #1a1e25 1px);
+}
+.nav-right .title-list .right-top .iconfont.icon-search.active { color: #E2231A; }
+#title-list-nav a:before { color: #E2231A; }
+#title-list-nav a:hover .post-title,
+#title-list-nav a.hover .post-title { color: #FFC300; }
+#local-search-result a:before { color: #E2231A; }
+#local-search-result::-webkit-scrollbar-thumb { background: #39414c; }
+#local-search-input {
+  color: #d8dde4 !important;
+  border-bottom: 1px solid #343b46 !important;
+}
+.nav-right .icon-case-sensitive:hover::before,
+.nav-right .icon-case-sensitive.active:before {
+  background: #2c333e;
+  border: 1px solid #4a525e;
+}
+#local-search-result { color: #98a2ad; text-shadow: none; }
+#local-search-result .search-result { color: #98a2ad; }
+#local-search-result .search-keyword { color: #FFC300; }
+#no-item-tips span { color: #FF6B5E; }
+/* 友链 */
+.friends-content a { color: #FFC300; }
+.friends-content a:hover { color: #ff5c4d; }
+
+/* ---------- 中间阅读区 ---------- */
+#post { background: #14171d; color: #d8dde4; }
+#post ::selection { background: #E2231A; color: #fff; }
+#post .pjax article {
+  background: #1d212a;
+  border: 1px solid #2a3039;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, .35);
+  margin: 26px 0 34px;
+}
+/* 首页导语卡片内的 toc */
+#post .pjax article .toc a { color: #aab2bd; }
+#post .pjax article .toc a:hover { color: #FFC300; }
+/* 文章元信息 */
+#post .pjax article .article-meta { color: #8b93a0; border-left: 3px solid #E2231A; }
+#post .pjax article .article-meta .book a:hover,
+#post .pjax article .article-meta .origin a:hover,
+#post .pjax article .article-meta .top-comment a:hover { color: #FFC300; }
+/* 标签胶囊微调亮度 */
+#post .pjax article .article-meta .tag a { text-shadow: 0 1px 2px rgba(0, 0, 0, .4); }
+/* 正文链接 */
+#post .pjax article .article-entry a {
+  color: #FFC300;
+  border-bottom: 1px solid rgba(255, 195, 0, .35);
+}
+#post .pjax article .article-entry a:hover { color: #ff5c4d; text-decoration: none; }
+/* 引用块 */
+#post .pjax article blockquote {
+  color: #aab2bd;
+  border-left: 4px solid #E2231A;
+  background-color: #232834;
+}
+/* 列表线框（thread 样式） */
+#post .pjax article .article-entry > ol,
+#post .pjax article .article-entry > ul,
+#post .pjax article > ol,
+#post .pjax article > ul { border: 1px solid #2e3540; }
+/* 表格 */
+#post .pjax article table tr { background: #232834; border-top: 1px solid #343b46; }
+#post .pjax article table tr:nth-child(2n) { background: #272d38; }
+#post .pjax article table th { border: 1px solid #343b46; color: #eef1f5; }
+#post .pjax article table td { border: 1px solid #343b46; }
+#post .pjax article table.green_title tr th {
+  border: 1px solid #E2231A;
+  background: #E2231A;
+  color: #fff;
+}
+#post .pjax article table.green tr:nth-child(2n) { background: #272d38; }
+#post .pjax article table.green tr th { color: #eef1f5; }
+/* 行内代码 */
+#post .pjax article :not(pre) > code {
+  background: #2b313c;
+  color: #ffd76e;
+  border-radius: 4px;
+}
+/* 代码块（配合 atom-dark 高亮） */
+#post .pjax article pre { background: #191c23; border-radius: 8px; }
+#post .pjax article pre > code { background: #191c23 !important; }
+/* 图片说明 */
+#post .pjax article .img_alt span { border-bottom: 1px solid #39414c; color: #8b93a0; }
+/* 页脚版权 */
+#post .copyright { color: #7d8592; }
+#post .copyright a { color: #FFC300; border-bottom: none; }
+#post .copyright a:hover { color: #ff5c4d; }
+/* 打赏按钮（品牌红圆钮） */
+.dashang {
+  background: #E2231A !important;
+  color: #fff !important;
+  box-shadow: 0 3px 14px rgba(226, 35, 26, .45) !important;
+}
+
+/* ---------- 悬浮组件 ---------- */
+/* 侧栏收展半圆开关 */
+.hide-list .semicircle { background-color: #E2231A; }
+/* 右上全屏切换按钮 */
+.full-toc .full .min, .full-toc .full .max { background: #1a1d24; color: #FFC300; }
+/* 回到顶部 */
+.full-toc #rocket:hover::before { color: #FFC300; }
+
+/* ---------- 滚动条 ---------- */
+#post::-webkit-scrollbar { width: 8px; }
+#post::-webkit-scrollbar-track { background: transparent; }
+#post::-webkit-scrollbar-thumb { background: #333b46; border-radius: 4px; }
+#post::-webkit-scrollbar-thumb:hover { background: #E2231A; }
+#post .pjax article pre > code::-webkit-scrollbar-thumb { background: #39414c; }
+
+/* ---------- 移动端补充 ---------- */
+@media screen and (max-width: 426px) {
+  #post .pjax article { margin: 14px 0 20px; }
+}
